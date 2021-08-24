@@ -1,0 +1,50 @@
+form {
+    text-align: center;
+}
+#footer {
+     position: absolute;
+     bottom: 0;
+     width: 100%;
+     height: 60px;
+     background-color: whitesmoke;
+ }
+#header{
+    background-color:#cdc6c6;
+    color: #f3f3f3;
+    width:100%;
+    height:20px;
+}
+#resident{
+   text-align: right;
+}
+#notResident{
+    text-align: right;
+}
+tbody tr td{
+    max-width: 300px;
+}
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
+.container>a:hover {
+    text-decoration: none;
+}
+#page-preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 100500;
+}
+#page-preloader .spinner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url('https://i.gifer.com/VAyR.gif') no-repeat 50% 50%;
+    margin: -16px 0 0 -16px;
+}
+
+

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>demo</name>
+    <packaging>war</packaging>
+
+    <properties>
+        <slf4jVersion>1.6.1</slf4jVersion>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <junit.version>5.7.1</junit.version>
+    </properties>
+
+    <!--    <dependencies>-->
+    <!--        &lt;!&ndash;    &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-checkstyle-plugin &ndash;&gt;&ndash;&gt;-->
+    <!--        &lt;!&ndash;    <dependency>&ndash;&gt;-->
+    <!--        &lt;!&ndash;        <groupId>org.apache.maven.plugins</groupId>&ndash;&gt;-->
+    <!--        &lt;!&ndash;        <artifactId>maven-checkstyle-plugin</artifactId>&ndash;&gt;-->
+    <!--        &lt;!&ndash;        <version>3.1.0</version>&ndash;&gt;-->
+    <!--        &lt;!&ndash;    </dependency>&ndash;&gt;-->
+
+    <!--        <dependency>-->
+    <!--            <groupId>org.projectlombok</groupId>-->
+    <!--            <artifactId>lombok</artifactId>-->
+    <!--            <version>1.18.20</version>-->
+    <!--            <scope>provided</scope>-->
+    <!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>junit</groupId>-->
+    <!--            <artifactId>junit</artifactId>-->
+    <!--            <version>4.11</version>-->
+    <!--            <scope>test</scope>-->
+    <!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>mysql</groupId>-->
+    <!--            <artifactId>mysql-connector-java</artifactId>-->
+    <!--            <scope>runtime</scope>-->
+    <!--            <version>8.0.13</version>-->
+    <!--        </dependency>-->
+    <!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.hibernate/hibernate-core &ndash;&gt;-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.hibernate</groupId>-->
+    <!--            <artifactId>hibernate-core</artifactId>-->
+    <!--            <version>5.4.31.Final</version>-->
+    <!--        </dependency>-->
+    <!--        &lt;!&ndash;        <dependency>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <groupId>javax.ejb</groupId>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <artifactId>javax.ejb-api</artifactId>&ndash;&gt;-->
+    <!--        &lt;!&ndash;            <version>3.2.2</version>&ndash;&gt;-->
+    <!--        &lt;!&ndash;        </dependency>&ndash;&gt;-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.hibernate</groupId>-->
+    <!--            <artifactId>hibernate-entitymanager</artifactId>-->
+    <!--            <version>3.4.0.GA</version>-->
+    <!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.hibernate</groupId>-->
+    <!--            <artifactId>hibernate-commons-annotations</artifactId>-->
+    <!--            <version>3.2.0.Final</version>-->
+    <!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.hibernate</groupId>-->
+    <!--            <artifactId>ejb3-persistence</artifactId>-->
+    <!--            <version>1.0.2.GA</version>-->
+    <!--        </dependency>-->
+
+    <!--        <dependency>-->
+    <!--            <groupId>org.hibernate</groupId>-->
+    <!--            <artifactId>hibernate-annotations</artifactId>-->
+    <!--            <version>3.5.6-Final</version>-->
+    <!--        </dependency>-->
+    <!--            <groupId>org.hibernate</groupId>-->
+    <!--            <artifactId>hibernate-commons-annotations</artifactId>-->
+    <!--            <version>3.2.0.Final</version>-->
+    <!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.slf4j</groupId>-->
+    <!--            <artifactId>slf4j-log4j12</artifactId>-->
+    <!--            <version>1.7.25</version>-->
+    <!--        </dependency>-->
+
+    <!--    </dependencies>-->
+    <!--            <!- https://mvnrepository.com/artifact/javax.ejb/ejb-api &ndash;&gt;-->
+    <!--        <dependency>-->
+    <!--            <groupId>javax.transaction</groupId>-->
+    <!--            <artifactId>jta</artifactId>-->
+    <!--            <version>1.1</version>-->
+    <!--        </dependency>-->
+
+    <!--        <dependency>-->
+    <!--            <groupId>org.hibernate</groupId>-->
+    <!--            <artifactId>hibernate-entitymanager</artifactId>-->
+    <!--            <version>3.4.0.GA</version>-->
+    <!--        </dependency>-->
+
+    <!--    &lt;!&ndash; https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager &ndash;&gt;-->
+    <!--    <dependency>-->
+    <!--        <groupId>org.hibernate</groupId>-->
+    <!--        <artifactId>hibernate-entitymanager</artifactId>-->
+    <!--        <version>5.5.3.Final</version>-->
+    <!--    </dependency>-->
+
+    <!--        <dependency>-->
+    <!--            <groupId>org.hibernate</groupId>-->
+    <!--            <artifactId>ejb3-persistence</artifactId>-->
+    <!--            <version>1.0.2.GA</version>-->
+    <!--        </dependency>-->
+
+    <!--        <dependency>-->
+    <!--            <groupId>org.hibernate</groupId>-->
+    <!--            <artifactId>hibernate-annotations</artifactId>-->
+    <!--            <version>3.5.6-Final</version>-->
+    <!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.projectlombok</groupId>-->
+    <!--            <artifactId>lombok</artifactId>-->
+    <!--            <version>1.18.20</version>-->
+    <!--            <scope>provided</scope>-->
+    <!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>junit</groupId>-->
+    <!--            <artifactId>junit</artifactId>-->
+    <!--            <version>4.11</version>-->
+    <!--            <scope>test</scope>-->
+    <!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>mysql</groupId>-->
+    <!--            <artifactId>mysql-connector-java</artifactId>-->
+    <!--            <scope>runtime</scope>-->
+    <!--            <version>8.0.13</version>-->
+    <!--        </dependency>-->
+    <!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.hibernate/hibernate-core &ndash;&gt;-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.hibernate</groupId>-->
+    <!--            <artifactId>hibernate-core</artifactId>-->
+    <!--            <version>5.4.31.Final</version>-->
+    <!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.hibernate</groupId>-->
+    <!--            <artifactId>hibernate-entitymanager</artifactId>-->
+    <!--            <version>3.4.0.GA</version>-->
+    <!--        </dependency>-->
+    <!--    </dependencies>-->
+
+    <!--    <build>-->
+    <!--        <plugins>-->
+    <!--            <plugin>-->
+    <!--                <groupId>org.apache.maven.plugins</groupId>-->
+    <!--                <artifactId>maven-war-plugin</artifactId>-->
+    <!--                <version>3.3.1</version>-->
+    <!--            </plugin>-->
+    <!--        </plugins>-->
+    <!--    </build>-->
+
+    <!--    <build>-->
+    <!--        <plugins>-->
+    <!--            <plugin>-->
+    <!--                <groupId>org.apache.maven.plugins</groupId>-->
+    <!--                <artifactId>maven-compiler-plugin</artifactId>-->
+    <!--                <configuration>-->
+    <!--                    <source>8</source>-->
+    <!--                    <target>8</target>-->
+    <!--                </configuration>-->
+    <!--            </plugin>-->
+    <!--        </plugins>-->
+    <!--    </build>-->
+
+    <!--    <dependencies>-->
+
+    <!--        <dependency>-->
+    <!--            <groupId>org.slf4j</groupId>-->
+    <!--            <artifactId>slf4j-api</artifactId>-->
+    <!--            <version>${slf4jVersion}</version>-->
+    <!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.slf4j</groupId>-->
+    <!--            <artifactId>slf4j-log4j12</artifactId>-->
+    <!--            <version>${slf4jVersion}</version>-->
+    <!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>log4j</groupId>-->
+    <!--            <artifactId>log4j</artifactId>-->
+    <!--            <version>1.2.16</version>-->
+    <!--            <scope>runtime</scope>-->
+    <!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>javax.servlet</groupId>-->
+    <!--            <artifactId>javax.servlet-api</artifactId>-->
+    <!--            <version>4.0.1</version>-->
+    <!--        </dependency>-->
+    <!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-checkstyle-plugin &ndash;&gt;-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.apache.maven.plugins</groupId>-->
+    <!--            <artifactId>maven-checkstyle-plugin</artifactId>-->
+    <!--            <version>3.1.0</version>-->
+    <!--        </dependency>-->
+
+    <!--        <dependency>-->
+    <!--            <groupId>org.projectlombok</groupId>-->
+    <!--            <artifactId>lombok</artifactId>-->
+    <!--            <version>1.18.20</version>-->
+    <!--            <scope>provided</scope>-->
+    <!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>junit</groupId>-->
+    <!--            <artifactId>junit</artifactId>-->
+    <!--            <version>4.11</version>-->
+    <!--            <scope>test</scope>-->
+    <!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>mysql</groupId>-->
+    <!--            <artifactId>mysql-connector-java</artifactId>-->
+    <!--            <scope>runtime</scope>-->
+    <!--            <version>8.0.13</version>-->
+    <!--        </dependency>-->
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+    <!--        <dependency>-->
+    <!--            <groupId>org.hibernate</groupId>-->
+    <!--            <artifactId>hibernate-core</artifactId>-->
+    <!--            <version>5.5.5.Final</version>-->
+    <!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>org.hibernate</groupId>-->
+    <!--            <artifactId>hibernate-core</artifactId>-->
+    <!--            <version>5.4.31.Final</version>-->
+    <!--        </dependency>-->
+
+    <!--        <dependency>-->
+    <!--            <groupId>org.hibernate</groupId>-->
+    <!--            <artifactId>hibernate-entitymanager</artifactId>-->
+    <!--            <version>3.4.0.GA</version>-->
+    <!--        </dependency>-->
+    <!--        <dependency>-->
+    <!--            <groupId>hibernate-commons-annotations</groupId>-->
+    <!--            <artifactId>hibernate-commons-annotations</artifactId>-->
+    <!--            <version>3.5.6-Final</version>-->
+    <!--        </dependency>-->
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-commons-annotations -->
+    <!--        <dependency>-->
+    <!--            <groupId>org.hibernate</groupId>-->
+    <!--            <artifactId>hibernate-commons-annotations</artifactId>-->
+    <!--            <version>3.2.0.Final</version>-->
+    <!--        </dependency>-->
+    <!--    </dependencies>-->
+    <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.25</version>
+        </dependency>
+
+        <!-- Hibernate -->
+        <!-- to start need only this -->
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.5.0.Final</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.5.0.Final</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>javax.persistence-api</artifactId>
+            <version>2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>codemodel</artifactId>
+            <version>2.2.11</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>4.3.0.Final</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.umlg/sqlg-mysql-dialect -->
+        <dependency>
+            <groupId>org.umlg</groupId>
+            <artifactId>sqlg-mysql-dialect</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <!-- Thanks for using https://jar-download.com -->
+
+        <!-- https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime -->
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.faces</groupId>
+            <artifactId>javax.faces-api</artifactId>
+            <version>2.3</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.websocket</groupId>
+            <artifactId>javax.websocket-api</artifactId>
+            <version>1.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.ejb</groupId>
+            <artifactId>javax.ejb-api</artifactId>
+            <version>3.2.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+        <!--Generate metamodel classes ClassName_ -->
+<!--        <dependency>-->
+<!--            <groupId>org.hibernate</groupId>-->
+<!--            <artifactId>hibernate-jpamodelgen</artifactId>-->
+<!--            <version>4.3.8.Final</version>-->
+<!--        </dependency>-->
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.0</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
